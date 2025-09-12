@@ -1,0 +1,28 @@
+body { /*Defines background and font properties*/
+    background-image: linear-gradient(to bottom right, #18aaff, #00ff95, #8400ff);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+        
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #000;
+}
+.container { /*Contains all data in a centered container*/
+    max-width: 1200px;
+    margin: 0 auto; /* Center the content */
+    background-image: linear-gradient(to bottom right, #ffffffb0, #34ffaa8f, #ffffffa1);
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px #0000000d;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+a { /*makes it so that links aren't underlined when looking at them*/
+    color: #268bd2; /* A pleasant blue for links */
+    text-decoration: none;
+}
+a:hover { /*makes it so that links are underlined when you hover over them*/
+    text-decoration: underline;
+}
