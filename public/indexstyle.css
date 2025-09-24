@@ -26,3 +26,7 @@ a { /*makes it so that links aren't underlined when looking at them*/
 a:hover { /*makes it so that links are underlined when you hover over them*/
     text-decoration: underline;
 }
+table {
+    width: 100%;
+    font-size: 24px;
+}
