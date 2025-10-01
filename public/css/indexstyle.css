@@ -30,3 +30,12 @@ table {
     width: 100%;
     font-size: 24px;
 }
+@keyframes changeInfoColor {
+    0% {color: #000000;}
+    100% {color: #ff0000;}
+}
+.chargeInfoColor {
+  color: #ff0000;
+  animation-name: changeInfoColor;
+  animation-duration: 1.5s;
+}
