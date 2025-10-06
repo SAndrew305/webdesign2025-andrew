@@ -10,20 +10,30 @@
         color: #000000;
         line-height: 1.6;
         margin: 0;
-        padding: 20px;
-        background-size: cover;
+        padding: 0;
+        
+        background: linear-gradient(45deg, #18aaff, #00ff95, #8400ff, #ff61a2);
+            
+
+        background-size: 300% 300%; 
+
+        animation-name: background-pan;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in-out;
+
         background-attachment: fixed;
         background-repeat: no-repeat;
-            
         }
     .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        background-color: #ffffff;
+        max-width: 1200px;
+        margin: 0 auto; /* Center the content */
+        background-image: linear-gradient(to bottom right, #ffffffb0, #ccccccc4, #ffffffa1);
         padding: 25px 40px;
         border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
+        box-shadow: 0 4px 10px #0000000d;
+    }
     h1, h2 {
         color: #000000;
         border-bottom: 2px solid #bdbdbd;
@@ -44,22 +54,16 @@
         }
     }
 
-    .background {
-        animation-name: myAnimation;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
-
-    @keyframes background {
-        0% {background-image: linear-gradient(to bottom right, #18aaff, #00ff95, #8400ff);}
-        50% {background-image: linear-gradient(to bottom right, #8400ff, #18aaff, #00ff95);}
-        100% {background-image: linear-gradient(to bottom right, #00ff95, #8400ff, #18aaff);}
-    }
+    @keyframes background-pan {
+                0% { background-position: 0% 50%; }
+                50% { background-position: 100% 50%; }
+                100% { background-position: 0% 50%; }
+            }
 </style>
 </head>
-
 <body>
-    <p>Help</p>
+<div class="container">
+    <h1>And it works.</h1>
+</div>
 </body>
 </html>
