@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Origins of Linux & Git</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        main {
+            max-width: 800px;
+            background-color: #2c2c2c;
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            border: 1px solid #444;
+        }
+
+        /* Terminal Styling */
+        #terminal {
+            background-color: #1e1e1e;
+            color: #d4d4d4;
+            font-family: "Courier New", Courier, monospace;
+            border-radius: 8px;
+            border: 1px solid #444;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+        }
+        #terminal-header {
+            background-color: #3c3c3c;
+            padding: 8px 12px;
+            font-weight: bold;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+            text-align: center;
+        }
+        #terminal-body {
+            padding: 10px;
+            height: 250px;
+            overflow-y: auto;
+        }
+        #terminal-output {
+            white-space: pre-wrap; /* Allows text to wrap */
+            word-wrap: break-word;
+        }
+        .prompt {
+            color: #569cd6; /* Blue */
+            font-weight: bold;
+        }
+        .prompt span {
+            color: #4ec9b0; /* Teal */
+        }
+        #input-line {
+            display: flex;
+        }
+        #terminal-input {
+            background: transparent;
+            border: none;
+            color: #d4d4d4;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 1em;
+            flex-grow: 1;
+            outline: none;
+        }
+
+        /* Content Styling */
+        h1, h2 {
+            color: #58a6ff;
+            border-bottom: 2px solid #444;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            margin-bottom: 1rem;
+        }
+        strong {
+            color: #79c0ff;
+        }
+        .highlight {
+            background-color: #3a3a3a;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        button {
+            display: block;
+            margin: 2rem auto 1rem;
+            padding: 12px 25px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #fff;
+            background-color: #377dff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #58a6ff;
+            transform: translateY(-2px);
+        }
+        #funFact {
+            background-color: #1f2428;
+            border-left: 4px solid #58a6ff;
+            padding: 1rem 1.5rem;
+            margin-top: 1rem;
+            border-radius: 0 8px 8px 0;
+            display: none; /* Initially hidden */
+            transition: opacity 0.5s;
+        }
+
+        /* Tux & Footer */
+        #tux-container {
+            margin-top: 3rem;
+            text-align: center;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.8em;
+            color: #9cdcfe; /* Light blue for ASCII art */
+        }
+        pre {
+            margin: 0 auto;
+            max-width: fit-content;
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #444;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        footer a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <div id="terminal">
+            <div id="terminal-header">
+                user@debian: ~ (Kernel 5.4)
+            </div>
+            <div id="terminal-body" onclick="document.getElementById('terminal-input').focus()">
+                <div id="terminal-output">Welcome to the interactive terminal! Type 'help' to see available commands.</div>
+                <div id="input-line">
+                    <div class="prompt">user@debian:<span>~$</span>&nbsp;</div>
+                    <input type="text" id="terminal-input" autocomplete="off" autofocus>
+                </div>
+            </div>
+        </div>
+
+        <h1>The Twin Revolutions of Linus Torvalds 🐧</h1>
+        
+        <hr>
+
+        ## The Kernel: Linux (1991)
+        
+        <p>
+            The story of Linux begins in 1991 with a Finnish student named <strong>Linus Torvalds</strong>. At the time, he was using a simplified, educational operating system called MINIX. Frustrated by its limitations, he decided to create his own operating system kernel from scratch as a personal hobby project. 
+        </p>
+        
+        <p>
+            He famously announced his project on a Usenet newsgroup, stating, "I'm doing a (free) operating system (just a hobby, won't be big and professional like gnu) for 386(486) AT clones." This humble project, eventually named <strong>Linux</strong>, combined with tools from the GNU Project, grew into the powerful, open-source operating system that now powers the vast majority of servers, Android phones, and supercomputers worldwide. 🌍
+        </p>
+
+        <hr>
+
+        ## The Tool: Git (2005)
+        
+        <p>
+            Fourteen years later, Linus needed a new tool to manage the very project he had created. The development of the Linux kernel involved thousands of developers from around the world. They were using a proprietary version control system (VCS) called <strong>BitKeeper</strong>.
+        </p>
+        
+        <p>
+            In 2005, the company behind BitKeeper revoked the free license for the Linux development community. Faced with a crisis, Linus did what he does best: he built his own solution. In just over a week, he created the initial version of <strong>Git</strong>, a new kind of VCS. His design goals were speed, a distributed model, and the ability to handle a massive project like the Linux kernel with integrity. Today, Git is the undisputed standard for version control in software development. 💻
+        </p>
+
+        <hr>
+        
+        <button id="factButton">Reveal the Connection</button>
+        <div id="funFact">
+            <p><strong>The Connection? Pragmatism.</strong> Both Linux and Git were born out of Linus Torvalds' personal need for a better tool. He didn't set out to change the world; he just wanted to solve a problem he was facing. His genius was creating solutions that were so effective, they solved the same problem for millions of others. He wrote both in the C programming language. 💡</p>
+        </div>
+
+        <div id="tux-container">
+            <p>Tux, overseeing the terminal...</p>
+            <pre>
+     .--.
+    |o_o |
+    |:_/ |
+   //   \ \
+  (|     | )
+ /'\_   _/`\
+ \___)=(___/
+            </pre>
+        </div>
+
+        <footer>
+            <p>Created with HTML, CSS, and JavaScript. Explore the Linux kernel source on <a href="https://github.com/torvalds/linux" target="_blank">GitHub</a>.</p>
+        </footer>
+    </main>
+
+    <script>
+        // --- Terminal JavaScript ---
+        const terminalOutput = document.getElementById('terminal-output');
+        const terminalInput = document.getElementById('terminal-input');
+        const terminalBody = document.getElementById('terminal-body');
+
+        terminalInput.addEventListener('keydown', function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                const command = terminalInput.value.trim();
+                const promptHTML = `<div class="prompt">user@debian:<span>~$</span>&nbsp;</div>`;
+                
+                // Echo the command
+                terminalOutput.innerHTML += `\n<div style="display: flex;">${promptHTML}${command}</div>`;
+                
+                // Process the command
+                processCommand(command);
+
+                // Clear input
+                terminalInput.value = '';
+
+                // Scroll to bottom
+                terminalBody.scrollTop = terminalBody.scrollHeight;
+            }
+        });
+
+        function processCommand(command) {
+            const args = command.split(' ');
+            const baseCmd = args[0].toLowerCase();
+            let output = '';
+
+            switch (baseCmd) {
+                case 'help':
+                    output = `Available commands:
+  help      - Show this list of commands
+  uname -r  - Print kernel release
+  whoami    - Print the current user
+  date      - Display the current date and time
+  echo      - Display a line of text
+  clear     - Clear the terminal screen`;
+                    break;
+                case 'uname':
+                    if (args[1] === '-r') {
+                        output = '5.4.0-generic';
+                    } else {
+                        output = `uname: invalid option -- '${args[1] || ''}'\nTry 'uname --help' for more information.`;
+                    }
+                    break;
+                case 'whoami':
+                    output = 'user';
+                    break;
+                case 'date':
+                    output = new Date().toString();
+                    break;
+                case 'echo':
+                    output = args.slice(1).join(' ');
+                    break;
+                case 'clear':
+                    terminalOutput.innerHTML = '';
+                    return; // Skip default output append
+                case '':
+                    // Do nothing for an empty command
+                    return;
+                default:
+                    output = `bash: command not found: ${baseCmd}`;
+                    break;
+            }
+            terminalOutput.innerHTML += `<div>${output}</div>`;
+        }
+
+        // --- Fun Fact Button JavaScript ---
+        const factButton = document.getElementById('factButton');
+        const funFactDiv = document.getElementById('funFact');
+
+        factButton.addEventListener('click', () => {
+            if (funFactDiv.style.display === 'block') {
+                funFactDiv.style.display = 'none';
+                factButton.textContent = 'Reveal the Connection';
+            } else {
+                funFactDiv.style.display = 'block';
+                factButton.textContent = 'Hide the Connection';
+            }
+        });
+    </script>
+
+</body>
+</html>
