@@ -3,12 +3,12 @@ Attempt making a classification model on edgeimpulse.com. Job if assigned for ot
 
 Required:
 - Visual Classification (necessary). Include:
-	- Data Entries;
-	- Data Totals;
+	- Data Entries; [[t1a10-ei-dataent.jpg]]
+	- Data Totals; [[t1a10-ei-datatotals.jpg]]
 	- Data Explorer; [[t1a10-ei-dataex.jpg]]
 	- Confusion Matrix; [[t1a10-ei-confMat.jpg]]
-	- "0unknown" classified correctly; and
-	- "1pen" classified correctly.
+	- "0unknown" classified correctly; [[t1a10-ei-0unknown.jpg]] and
+	- "1pen" classified correctly. [[t1a10-ei-1pen.jpg]]
 
 Optional:
 - Make word (audio/sound recognition);

@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "public/t1a09-javascript-research.md",
+                "file": "public/markdown/t1a10-edgeimpulse.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for t1a09-javascript-research"
+              "title": "Backlinks for t1a10-edgeimpulse"
             }
           },
           {
@@ -172,24 +172,25 @@
   },
   "active": "6ab6601b1e06cac7",
   "lastOpenFiles": [
-    "public/images/t1a10-ei-confMat.jpg",
+    "public/images/t1a10-ei-1pen.jpg",
+    "public/images/t1a10-ei-0unknown.jpg",
+    "public/images/Screenshot 2025-10-20 112254.png",
+    "public/images/Screenshot 2025-10-20 112230.png",
     "public/markdown/t1a10-edgeimpulse.md",
+    "public/images/t1a10-ei-datatotals.jpg",
+    "public/images/t1a10-ei-dataent.jpg",
+    "public/images/t1a10-ei-dataent.png",
+    "public/images/Screenshot 2025-10-20 111709.png",
+    "public/images/t1a10-ei-datatotals.png",
+    "public/images/t1a10-ei-confMat.jpg",
     "public/images/t1a10-ei-dataex.jpg",
     "t1a10-ei-dataex.png.md",
-    "public/images/t1a10-ei-confMat.png",
     "public/images/t1a10-ei-confMat.jps",
-    "public/images/t1a10-ei-dataex.png",
-    "public/images/Screenshot 2025-10-20 111030.png",
-    "public/images/Screenshot 2025-10-20 111017.png",
     "README.md",
     "public/markdown/t1a09-javascript-research.md",
     "Untitled.canvas",
     "public/markdown",
     "public/js/markdown",
-    "public/t1a09-javascript-research.md",
-    "public/images/IMG_1350.JPG",
-    "public/images/t1a06-easyEDA-1.jpg",
-    "public/images/rabbit.jpg",
-    "public/images/dog.jpg"
+    "public/t1a09-javascript-research.md"
   ]
 }

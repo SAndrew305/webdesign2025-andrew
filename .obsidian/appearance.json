@@ -1,5 +1,7 @@
 {
   "theme": "obsidian",
   "accentColor": "",
-  "cssTheme": ""
+  "cssTheme": "",
+  "interfaceFontFamily": "Tahoma",
+  "textFontFamily": "Tahoma"
 }
