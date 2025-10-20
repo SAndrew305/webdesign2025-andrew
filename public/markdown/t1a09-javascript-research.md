@@ -1,5 +1,3 @@
-# JAVASCRIPT Info sheet
-
 ## VARIABLES
 
 ### VARIABLE DECLARATIONS
@@ -32,7 +30,7 @@ Scope - Visibility of a variable or how it can be used after declaration.
 
 - Number
 
-- BOOLEAN
+- Boolean
 
 - Null
 
@@ -40,4 +38,4 @@ Scope - Visibility of a variable or how it can be used after declaration.
 
 - Object
 
-- typeof Operator
+- "typeof" Operator

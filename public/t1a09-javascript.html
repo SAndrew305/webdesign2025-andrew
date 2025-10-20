@@ -1,14 +1,313 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>t1a09 - Javascript</title>
-    <link rel="stylesheet" href="css/standardBasic.css">
+    <title>Learn JavaScript</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #f7df1e; /* JavaScript Yellow */
+            color: #000;
+            padding: 2rem;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+        }
+        nav {
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        nav a {
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 0.5rem;
+        }
+        nav a:hover {
+            background-color: #555;
+            border-radius: 4px;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        section {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        h2 {
+            border-bottom: 3px solid #f7df1e;
+            padding-bottom: 0.5rem;
+            color: #222;
+        }
+        h3 {
+            color: #444;
+        }
+        pre {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.95rem;
+        }
+        code {
+            font-family: "Consolas", Courier, monospace;
+        }
+        .html-code .tag { color: #f92672; }
+        .html-code .attr { color: #a6e22e; }
+        .html-code .value { color: #e6db74; }
+        
+        .js-code .comment { color: #75715e; }
+        .js-code .keyword { color: #66d9ef; }
+        .js-code .const { color: #f92672; }
+        .js-code .string { color: #e6db74; }
+        .js-code .function { color: #a6e22e; }
+        .js-code .number { color: #ae81ff; }
+        .js-code .dot { color: #f8f8f2; }
+        .js-code .paren { color: #f8f8f2; }
+        
+        button {
+            background-color: #f7df1e;
+            border: none;
+            color: #000;
+            padding: 0.8rem 1.2rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #e6cf1c;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #777;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
-<h1>t1a09 - Javascript</h1>
-<h2>A (very) brief history of Javascript</h2>
-Javascript was created in 1995 in one week by programmer Brendan Eich, with the goal of adding in an easy-to-learm scripting language to the Netscape internet browser.
-It's original name was called Mocha, but the rise of Java prompted the marketing team to rename it Javascript to hopefully capitalize on the Java community,
-despite it having little to no relation to Java whatsoever.
-<h2>
+<body>
+
+    <header>
+        <h1>Welcome to JavaScript</h1>
+        <p>The language that powers the web.</p>
+    </header>
+
+    <nav>
+        <a href="#about">About JS</a>
+        <a href="#basics">The Basics</a>
+        <a href="#examples">Examples</a>
+        <a href="#advanced">Advanced</a>
+        <a href="#frameworks">Frameworks</a>
+        <a href="#resources">Resources</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>What is JavaScript?</h2>
+            <p><strong>JavaScript (JS)</strong> is a high-level, interpreted programming language that makes websites interactive. While HTML provides the structure (like the skeleton) and CSS provides the style (like the clothes), JavaScript provides the behavior (like making it walk and talk).</p>
+            <p>Originally created for front-end web development, its role has expanded dramatically. Today, JavaScript is used for:</p>
+            <ul>
+                <li><strong>Front-End Web Development:</strong> Creating interactive user interfaces, validating forms, and updating page content without a refresh.</li>
+                <li><strong>Back-End Development:</strong> Using environments like <strong>Node.js</strong> to build servers, manage databases, and create APIs.</li>
+                <li><strong>Mobile App Development:</strong> With frameworks like <strong>React Native</strong>, you can build native apps for iOS and Android.</li>
+                <li><strong>Game Development:</strong> Powering thousands of browser-based games.</li>
+            </ul>
+        </section>
+
+        <section id="basics">
+            <h2>The Basics</h2>
+            <p>Every JavaScript journey starts with these core concepts.</p>
+            
+            <h3>Variables</h3>
+            <p>Variables are containers for storing data. In modern JavaScript, you'll primarily use <code>let</code> (for values that can change) and <code>const</code> (for constant values that won't change).</p>
+            <pre class="js-code"><span class="comment">// Use let for variables that will be reassigned</span>
+<span class="keyword">let</span> <span class="function">age</span> = <span class="number">30</span>;
+<span class="function">age</span> = <span class="number">31</span>; <span class="comment">// This is okay</span>
+
+<span class="comment">// Use const for constants</span>
+<span class="const">const</span> <span class="function">birthYear</span> = <span class="number">1994</span>;
+<span class="comment">// birthYear = 1995; // This would cause an error!</span></pre>
+
+            <h3>Data Types</h3>
+            <p>JavaScript has several fundamental data types:</p>
+            <ul>
+                <li><strong>String:</strong> Text, enclosed in quotes. <code>"Hello World"</code></li>
+                <li><strong>Number:</strong> Both integers and decimals. <code>42</code> or <code>3.14</code></li>
+                <li><strong>Boolean:</strong> A logical value. <code>true</code> or <code>false</code></li>
+                <li><strong>Null:</strong> The intentional absence of any value. <code>null</code></li>
+                <li><strong>Undefined:</strong> A variable that has been declared but not assigned a value. <code>undefined</code></li>
+                <li><strong>Object:</strong> A collection of key/value pairs. <code>{ name: "Alice", age: 25 }</code></li>
+            </ul>
+
+            <h3>Functions</h3>
+            <p>A function is a reusable block of code designed to perform a specific task. You define it once and can call it (or "invoke" it) many times.</p>
+            <pre class="js-code"><span class="comment">// Function declaration</span>
+<span class="keyword">function</span> <span class="function">greet</span>(<span class="function">name</span>) {
+    <span class="keyword">return</span> <span class="string">"Hello, "</span> + <span class="function">name</span> + <span class="string">"!"</span>;
+}
+
+<span class="comment">// Calling the function</span>
+<span class="const">const</span> <span class="function">greeting</span> = <span class="function">greet</span>(<span class="string">"Alice"</span>);
+<span class="function">console</span>.<span class="function">log</span>(<span class="function">greeting</span>); <span class="comment">// Outputs: "Hello, Alice!"</span></pre>
+
+            <h3>Control Flow (if/else)</h3>
+            <p>Conditional statements allow your code to make decisions and run different blocks of code based on a condition.</p>
+            <pre class="js-code"><span class="const">const</span> <span class="function">temperature</span> = <span class="number">25</span>;
+
+<span class="keyword">if</span> (<span class="function">temperature</span> > <span class="number">30</span>) {
+    <span class="function">console</span>.<span class="function">log</span>(<span class="string">"It's a hot day!"</span>);
+} <span class="keyword">else if</span> (<span class="function">temperature</span> > <span class="number">20</span>) {
+    <span class="function">console</span>.<span class="function">log</span>(<span class="string">"It's a pleasant day."</span>);
+} <span class="keyword">else</span> {
+    <span class="function">console</span>.<span class="function">log</span>(<span class="string">"It's a cold day."</span>);
+}</pre>
+        </section>
+
+        <section id="examples">
+            <h2>Simple Examples</h2>
+            <p>The best way to learn is by doing. Here are two fundamental examples.</p>
+            
+            <h3>1. "Hello, World!"</h3>
+            <p>This is the classic first program. You can add a <code>&lt;script&gt;</code> tag to your HTML file to run JavaScript. This example will pop up an alert box in your browser.</p>
+            <pre class="html-code"><span class="tag">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;html&gt;</span>
+<span class="tag">&lt;body&gt;</span>
+
+    <span class="tag">&lt;h1&gt;</span>My First Page<span class="tag">&lt;/h1&gt;</span>
+
+    <span class="tag">&lt;script&gt;</span>
+        <span class="function">alert</span>(<span class="string">'Hello, World!'</span>);
+    <span class="tag">&lt;/script&gt;</span>
+
+<span class="tag">&lt;/body&gt;</span>
+<span class="tag">&lt;/html&gt;</span></pre>
+
+            <h3>2. Making a Page Interactive</h3>
+            <p>JavaScript truly shines when it interacts with your HTML. This is called <strong>DOM Manipulation</strong> (Document Object Model). We'll add a button to our HTML and use JavaScript to make it do something.</p>
+            
+            <h4>The HTML:</h4>
+            <p>First, we give our elements <code>id</code> attributes so JavaScript can find them.</p>
+            <pre class="html-code"><span class="tag">&lt;h2</span> <span class="attr">id=</span><span class="value">"message"</span><span class="tag">&gt;</span>Click the button!<span class="tag">&lt;/h2&gt;</span>
+<span class="tag">&lt;button</span> <span class="attr">id=</span><span class="value">"myButton"</span><span class="tag">&gt;</span>Click Me!<span class="tag">&lt;/button&gt;</span></pre>
+            
+            <h4>The JavaScript:</h4>
+            <p>We use <code>getElementById</code> to find the elements, then use <code>addEventListener</code> to wait for a "click" event.</p>
+            <pre class="js-code"><span class="comment">// 1. Find the elements on the page</span>
+<span class="const">const</span> <span class="function">button</span> = <span class="function">document</span>.<span class="function">getElementById</span>(<span class="string">'myButton'</span>);
+<span class="const">const</span> <span class="function">message</span> = <span class="function">document</span>.<span class="function">getElementById</span>(<span class="string">'message'</span>);
+
+<span class="comment">// 2. Add an "event listener" to the button</span>
+<span class="function">button</span>.<span class="function">addEventListener</span>(<span class="string">'click'</span>, <span class="keyword">function</span>() {
+    <span class="comment">// 3. This code runs when the button is clicked</span>
+    <span class="function">message</span>.<span class="function">textContent</span> = <span class="string">'You clicked the button!'</span>;
+    <span class="function">message</span>.<span class="function">style</span>.<span class="function">color</span> = <span class="string">'green'</span>;
+});</pre>
+            
+            <h4>Live Demo:</h4>
+            <h2 id="message-demo" style="text-align: center;">Click the button!</h2>
+            <p style="text-align: center;"><button id="myButton-demo">Click Me!</button></p>
+
+        </section>
+        
+        <section id="advanced">
+            <h2>Advanced Concepts</h2>
+            <p>Once you're comfortable with the basics, you'll encounter these powerful concepts.</p>
+            
+            <h3>Asynchronous JavaScript</h3>
+            <p>By default, JavaScript runs one line at a time. But what if you need to fetch data from a server, which might take a few seconds? You don't want your entire website to freeze. Asynchronous JavaScript solves this.</p>
+            
+            <h4>Promises</h4>
+            <p>A <strong>Promise</strong> is an object that represents the eventual completion (or failure) of an asynchronous task. It starts in a "pending" state and eventually "fulfills" (succeeds) or "rejects" (fails).</p>
+            <pre class="js-code"><span class="function">fetch</span>(<span class="string">'https://api.example.com/data'</span>)
+    .<span class="function">then</span>(<span class="function">response</span> => <span class="function">response</span>.<span class="function">json</span>()) <span class="comment">// On success, parse the data</span>
+    .<span class="function">then</span>(<span class="function">data</span> => <span class="function">console</span>.<span class="function">log</span>(<span class="function">data</span>))  <span class="comment">// Use the data</span>
+    .<span class="function">catch</span>(<span class="function">error</span> => <span class="function">console</span>.<span class="function">error</span>(<span class="string">'Error:'</span>, <span class="function">error</span>)); <span class="comment">// On failure</span>
+</pre>
+
+            <h4>Async/Await</h4>
+            <p>This is modern syntax that makes asynchronous code look synchronous and easier to read. It's built on top of Promises.</p>
+            <pre class="js-code"><span class="comment">// You must be inside an 'async' function to use 'await'</span>
+<span class="keyword">async</span> <span class="keyword">function</span> <span class="function">fetchData</span>() {
+    <span class="keyword">try</span> {
+        <span class="const">const</span> <span class="function">response</span> = <span class="keyword">await</span> <span class="function">fetch</span>(<span class="string">'https://api.example.com/data'</span>);
+        <span class="const">const</span> <span class="function">data</span> = <span class="keyword">await</span> <span class="function">response</span>.<span class="function">json</span>();
+        <span class="function">console</span>.<span class="function">log</span>(<span class="function">data</span>);
+    } <span class="keyword">catch</span> (<span class="function">error</span>) {
+        <span class="function">console</span>.<span class="function">error</span>(<span class="string">'Error:'</span>, <span class="function">error</span>);
+    }
+}
+
+<span class="function">fetchData</span>();</pre>
+        </section>
+        
+        <section id="frameworks">
+            <h2>JavaScript Frameworks</h2>
+            <p>Frameworks and libraries give you pre-built tools to build complex applications faster. While you should learn "vanilla" (plain) JavaScript first, these are what most professional jobs use.</p>
+            
+            <h3>React</h3>
+            <p>Developed by <strong>Facebook (Meta)</strong>. React is a library for building user interfaces with a component-based architecture. It uses a "Virtual DOM" to efficiently update only the parts of the page that change. Great for single-page applications (SPAs) and mobile apps (with React Native).</p>
+            
+            <h3>Angular</h3>
+            <p>Developed by <strong>Google</strong>. Angular is a complete framework, meaning it provides a full, opinionated structure for your application (including routing, state management, etc.). It uses TypeScript (a superset of JavaScript) and is excellent for large, enterprise-scale applications.</p>
+            
+            <h3>Vue.js</h3>
+            <p>A progressive framework created by <strong>Evan You</strong>. Vue is known for its gentle learning curve and excellent documentation. It's highly flexible, allowing you to use it as a simple library (like React) or a full-featured framework (like Angular) as your project grows.</p>
+        </section>
+
+        <section id="resources">
+            <h2>Where to Learn More</h2>
+            <p>Ready to go deeper? These resources are the gold standard for JavaScript developers.</p>
+            <ul>
+                <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>:</strong> The ultimate reference for all web technologies, including JavaScript. Maintained by Mozilla.</li>
+                <li><strong><a href="https://www.freecodecamp.org/" target="_blank" rel="noopener noreferrer">freeCodeCamp</a>:</strong> A non-profit with thousands of hours of free tutorials, projects, and certifications.</li>
+                <li><strong><a href="https://javascript.info/" target="_blank" rel="noopener noreferrer">The Modern JavaScript Tutorial</a>:</strong> A comprehensive and up-to-date online textbook.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>A simple website about JavaScript.</p>
+    </footer>
+
+    <script>
+        const demoButton = document.getElementById('myButton-demo');
+        const demoMessage = document.getElementById('message-demo');
+
+        demoButton.addEventListener('click', function() {
+            demoMessage.textContent = 'See? It works!';
+            demoMessage.style.color = '#007BFF';
+            demoMessage.style.fontWeight = 'bold';
+        });
+    </script>
+</body>
+</html>
