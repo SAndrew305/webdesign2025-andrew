@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a76b6f8b5e02d056",
+        "id": "a68d716d472f770d",
         "type": "tabs",
         "children": [
           {
-            "id": "6ab6601b1e06cac7",
+            "id": "02c13323e22366e1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
-                "mode": "preview",
-                "source": true
+                "file": "public/markdown/t1a10-edgeimpulse.md",
+                "mode": "source",
+                "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "t1a10-edgeimpulse"
             }
           }
         ]
@@ -170,11 +170,13 @@
       "bases:Create new base": false
     }
   },
-  "active": "6ab6601b1e06cac7",
+  "active": "02c13323e22366e1",
   "lastOpenFiles": [
-    "public/markdown/t1a09-javascript-research 1.md",
     "README.md",
+    "Untitled.base",
     "public/markdown/t1a10-edgeimpulse.md",
+    "public/markdown/t1a10-edgeimpulse 1.md",
+    "public/markdown/t1a09-javascript-research 1.md",
     "public/images/t1a10-ei-1pen.jpg",
     "public/images/t1a10-ei-0unknown.jpg",
     "public/images/Screenshot 2025-10-20 112254.png",
