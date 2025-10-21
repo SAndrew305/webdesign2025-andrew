@@ -1,0 +1,16 @@
+<h1 aligh="center">t1a11-onClick</h1>
+
+<input type="button" value="alert" onclick="{alert('hi')}"><br>
+
+<div id="myDiv01">...</div>
+
+<button onClick="{
+    const myDiv = document.getElementByID('myDiv01')
+    myDiv.innerHTML = 'Hello'
+}">To Div</button><br>
+
+This is <b onMouseOver="{
+    document.body.style.backgroundColor = 'yellow';
+}"> bold and change background </b> this isn't.<br>
+
+You do 8 on... events. We have done onClick and onMouseOver.

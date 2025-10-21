@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/markdown/t1a10-edgeimpulse.md",
+                "file": "public/markdown/t1a11-onClick.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "t1a10-edgeimpulse"
+              "title": "t1a11-onClick"
             }
           }
         ]
@@ -95,7 +95,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "public/markdown/t1a10-edgeimpulse.md",
+                "file": "public/markdown/t1a11-onClick.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +105,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for t1a10-edgeimpulse"
+              "title": "Backlinks for t1a11-onClick"
             }
           },
           {
@@ -172,9 +172,17 @@
   },
   "active": "02c13323e22366e1",
   "lastOpenFiles": [
-    "README.md",
-    "Untitled.base",
     "public/markdown/t1a10-edgeimpulse.md",
+    "README.md",
+    "public/markdown/t1a11-JS2-onMouseOver.md",
+    "public/markdown/t1a11-onClick.md",
+    "public/markdown/t1a11-JS2-onClick.md",
+    "2025-10-21.md",
+    "Untitled.canvas",
+    "public/markdown/t1a09-javascript-research.md",
+    "public/t1a11-onClick-andrew.html",
+    "public/t1a10-edgeimpulse-andrew.html",
+    "Untitled.base",
     "public/markdown/t1a10-edgeimpulse 1.md",
     "public/markdown/t1a09-javascript-research 1.md",
     "public/images/t1a10-ei-1pen.jpg",
@@ -189,8 +197,6 @@
     "public/images/t1a10-ei-confMat.jpg",
     "t1a10-ei-dataex.png.md",
     "public/images/t1a10-ei-confMat.jps",
-    "public/markdown/t1a09-javascript-research.md",
-    "Untitled.canvas",
     "public/markdown",
     "public/js/markdown",
     "public/t1a09-javascript-research.md"

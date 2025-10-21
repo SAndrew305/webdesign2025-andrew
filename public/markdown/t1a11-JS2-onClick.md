@@ -1,0 +1,1 @@
+`onClick`: Used to execute a function when an HTML element (like a button) is clicked. Can be added directly into the HTML tag or using the `addEventListener` method to attach the event in the JS code.

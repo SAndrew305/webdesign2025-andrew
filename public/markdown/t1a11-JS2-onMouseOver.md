@@ -1,0 +1,1 @@
+`onmouseover`: triggered when the mouse pointer moves over an element, allowing the user to execute a function or script. Can be used directly in HTML or using an `addEventListener` to enhance interactivity on your web page.
