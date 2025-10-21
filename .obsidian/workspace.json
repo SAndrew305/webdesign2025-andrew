@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/markdown/t1a10-edgeimpulse.md",
-                "mode": "source",
-                "source": false
+                "file": "README.md",
+                "mode": "preview",
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "t1a10-edgeimpulse"
+              "title": "README"
             }
           }
         ]
@@ -172,21 +172,21 @@
   },
   "active": "6ab6601b1e06cac7",
   "lastOpenFiles": [
+    "public/markdown/t1a09-javascript-research 1.md",
+    "README.md",
+    "public/markdown/t1a10-edgeimpulse.md",
     "public/images/t1a10-ei-1pen.jpg",
     "public/images/t1a10-ei-0unknown.jpg",
     "public/images/Screenshot 2025-10-20 112254.png",
     "public/images/Screenshot 2025-10-20 112230.png",
-    "public/markdown/t1a10-edgeimpulse.md",
     "public/images/t1a10-ei-datatotals.jpg",
     "public/images/t1a10-ei-dataent.jpg",
     "public/images/t1a10-ei-dataent.png",
     "public/images/Screenshot 2025-10-20 111709.png",
     "public/images/t1a10-ei-datatotals.png",
     "public/images/t1a10-ei-confMat.jpg",
-    "public/images/t1a10-ei-dataex.jpg",
     "t1a10-ei-dataex.png.md",
     "public/images/t1a10-ei-confMat.jps",
-    "README.md",
     "public/markdown/t1a09-javascript-research.md",
     "Untitled.canvas",
     "public/markdown",
