@@ -6,4 +6,11 @@ Known events:
 - [`onMouseOver`](public/markdown/t1a11-JS2-onMouseOver.md)
 
 Learned events:
-- Insert here.
+- [`onChange`](public/markdown/t1a11-JS2-onChange.md)
+- [`onMouseOut`](public/markdown/t1a11-JS2-onMouseOut.md)
+- [`onKeyDown`](public/markdown/t1a11-JS2-onKeyDown.md)
+- [`onLoad`](public/markdown/t1a11-JS2-onLoad.md)
+- [`onScroll`](public/markdown/t1a11-JS2-onScroll.md)
+- [`onSubmit`](public/markdown/t1a11-JS2-onSubmit.md)
+- [`onSelect`](public/markdown/t1a11-JS2-onSelect.md)
+- [`onBlur`](public/markdown/t1a11-JS2-onBlur.md)
