@@ -1,0 +1,3 @@
+The `onchange` event occurs when **the value of an HTML element is changed**.
+
+This event is similar to the [`oninput`](https://www.w3schools.com/jsref/event_oninput.asp) event. The difference is that the `oninput` event occurs immediately after the value of an element has changed, while `onchange` occurs when the element loses focus, after the content has been changed. The other difference is that the `onchange` event also works on `<select>` elements.

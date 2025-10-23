@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "d7ad5b905f15e643",
+            "id": "4cadc12f950f06d9",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -31,8 +31,7 @@
               "title": "Graph view"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -180,21 +179,21 @@
       "bases:Create new base": false
     }
   },
-  "active": "d7ad5b905f15e643",
+  "active": "02c13323e22366e1",
   "lastOpenFiles": [
-    "public/markdown/t1a11-onClick.md",
     "public/markdown/t1a11-JS2-onBlur.md",
+    "public/markdown/t1a11-onClick.md",
     "public/markdown/t1a11-JS2-onSelect.md",
     "public/markdown/t1a11-JS2-onSubmit.md",
     "public/markdown/t1a11-JS2-onScroll.md",
     "public/markdown/t1a11-JS2-onLoad.md",
     "public/markdown/t1a11-JS2-onKeyDown.md",
-    "public/markdown/t1a11-JS2-onMouseOut.md",
     "public/markdown/t1a11-JS2-onChange.md",
+    "public/markdown/t1a11-JS2-onMouseOut.md",
+    "public/markdown/t1a11-JS2-onClick.md",
     "public/markdown/t1a10-edgeimpulse.md",
     "README.md",
     "public/markdown/t1a11-JS2-onMouseOver.md",
-    "public/markdown/t1a11-JS2-onClick.md",
     "2025-10-21.md",
     "Untitled.canvas",
     "public/markdown/t1a09-javascript-research.md",

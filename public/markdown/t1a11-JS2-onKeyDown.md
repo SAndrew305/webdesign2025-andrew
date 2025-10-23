@@ -1,0 +1,1 @@
+The `onkeydown` event occurs when the user **presses a key** on the keyboard.

@@ -1,0 +1,1 @@
+The `onsubmit` event occurs when a form is submitted.
