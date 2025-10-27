@@ -1,32 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="color-scheme" content="light dark">
-</head>
-<body>
-<pre style="word-wrap: break-word; white-space: pre-wrap;">
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;title&gt;Fade-in Header&lt;/title&gt;
-<!-- Tailwind CSS script removed -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade-in Header</title>
+    <!-- Tailwind CSS script removed -->
     <style>
         /* Use the Inter font, or a standard sans-serif fallback */
         html {
-           font-family: 'Inter', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         /* Replicating the previous Tailwind styles with standard CSS:
-        - Dark background (bg-gray-900)
-        - White text (text-white)
-        - Full viewport height (min-h-screen)
-        - Flexbox centering (flex, items-center, justify-center)
+          - Dark background (bg-gray-900)
+          - White text (text-white)
+          - Full viewport height (min-h-screen)
+          - Flexbox centering (flex, items-center, justify-center)
         */
         body {
             background-color: #111827;
             color: #ffffff;
-            min-height: 100vh;                
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -34,9 +28,9 @@
         }
 
         /* Replicating previous h1 styles:
-        - Font size (text-7xl)
-        - Font weight (font-bold)
-        - Letter spacing (tracking-tight)
+          - Font size (text-7xl)
+          - Font weight (font-bold)
+          - Letter spacing (tracking-tight)
         */
         h1 {
             font-size: 4.5rem; /* Approximately text-7xl */
@@ -46,44 +40,44 @@
         }
 
         /*
-        This is the new "slide" opacity effect.
-        1. We create a gradient mask that is 200% the width of the element.
-            Half of it is black (which means "show") and half is transparent (which means "hide").
-        2. We set the mask-size to 200% wide and 100% tall.
-        3. We initially position the mask at "100% 0", which means the right-most edge
-                    of the mask is aligned with the right-most edge of the h1. This places
-                    the "transparent" half of the mask over the text, making it invisible.
-                4. We set a transition for the 'mask-position' property.
-                */
-                #fadeInHeader {
-                    /* A CSS variable for the gradient to avoid repetition.
-                    We make the transition edge slightly soft (e.g., from 48% to 52%)
-                    instead of a hard 50% stop. This will create the
-                    soft "shadow" effect at the edge of the slide.
-                    */
-                    --mask-gradient: linear-gradient(to right, black 48%, rgba(0,0,0,0.2) 50%, transparent 52%);
-                    
-                    -webkit-mask-image: var(--mask-gradient);
-                    mask-image: var(--mask-gradient);
-                    
-                    -webkit-mask-size: 200% 100%;
-                    mask-size: 200% 100%;
-                    
-                    -webkit-mask-position: 100% 0;
-                    mask-position: 100% 0;
+          This is the new "slide" opacity effect.
+          1. We create a gradient mask that is 200% the width of the element.
+             Half of it is black (which means "show") and half is transparent (which means "hide").
+          2. We set the mask-size to 200% wide and 100% tall.
+          3. We initially position the mask at "100% 0", which means the right-most edge
+             of the mask is aligned with the right-most edge of the h1. This places
+             the "transparent" half of the mask over the text, making it invisible.
+          4. We set a transition for the 'mask-position' property.
+        */
+        #fadeInHeader {
+            /* A CSS variable for the gradient to avoid repetition.
+               We make the transition edge slightly soft (e.g., from 48% to 52%)
+               instead of a hard 50% stop. This will create the
+               soft "shadow" effect at the edge of the slide.
+            */
+            --mask-gradient: linear-gradient(to right, black 48%, rgba(0,0,0,0.2) 50%, transparent 52%);
+            
+            -webkit-mask-image: var(--mask-gradient);
+            mask-image: var(--mask-gradient);
+            
+            -webkit-mask-size: 200% 100%;
+            mask-size: 200% 100%;
+            
+            -webkit-mask-position: 100% 0;
+            mask-position: 100% 0;
 
-                    /* The previous text-shadow is removed to rely on the soft mask edge.
-                    */
-                    /* text-shadow: 0 0 15px rgba(17, 24, 39, 0.9); */
-                    
-                    /* Update the transition duration to 3s for
-                    the mask-position property.
-                    */
-                    transition: -webkit-mask-position 3s ease-in-out,
-                                mask-position 3s ease-in-out;
-                                /* text-shadow transition removed */
-                }
-            </style>
+            /* The previous text-shadow is removed to rely on the soft mask edge.
+            */
+            /* text-shadow: 0 0 15px rgba(17, 24, 39, 0.9); */
+            
+            /* Update the transition duration to 3s for
+               the mask-position property.
+            */
+            transition: -webkit-mask-position 3s ease-in-out,
+                        mask-position 3s ease-in-out;
+                        /* text-shadow transition removed */
+        }
+    </style>
 </head>
 <body class=""> <!-- Tailwind classes removed -->
 
@@ -121,9 +115,5 @@
     </script>
 
 </body>
-</html>"
-
-
-    </pre>
-</body>
 </html>
+
