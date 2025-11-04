@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "(public/markdown/t2a12-colors.md",
+                "file": "public/markdown/t2a12-colors.md",
                 "mode": "source",
                 "source": false
               },
@@ -171,6 +171,7 @@
   },
   "active": "4cadc12f950f06d9",
   "lastOpenFiles": [
+    "public/markdown/t2a12-colors.md",
     "(public/markdown/t2a12-colors.md",
     "README.md",
     "(public/markdown",
