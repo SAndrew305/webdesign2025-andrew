@@ -1,0 +1,2 @@
+Three colors that are side by side on the color wheel. This color combination is versatile, but can be overwhelming. To balance an analogous color scheme, choose one dominant color, and use the others as accents.
+![[analogous-colors_w1356xh780_ea8941ea410626bbeef060ff0490558500ea2b59255941c1b447b8aa6f447553.webp]]

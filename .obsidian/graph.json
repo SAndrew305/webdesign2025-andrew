@@ -5,7 +5,7 @@
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
+  "collapse-color-groups": false,
   "colorGroups": [
     {
       "query": "file:t1a11",
@@ -15,10 +15,17 @@
       }
     },
     {
+      "query": "file:t2a12",
+      "color": {
+        "a": 1,
+        "rgb": 7113444
+      }
+    },
+    {
       "query": "",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 11657298
       }
     }
   ],
@@ -32,6 +39,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.7132754626224234,
+  "scale": 0.6316046762907478,
   "close": true
 }

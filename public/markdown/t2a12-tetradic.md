@@ -1,0 +1,2 @@
+Four colors that are evenly spaced on the color wheel. Tetradic color schemes are bold and work best if you let one color be dominant, and use the others as accents. The more colors you have in your palette, the more difficult it is to balance.
+![[tetradic-colors_w1356xh780_b4f150eaf1b5f705f63b62c121c6794ef60fe0baff6a1bcef2eadcbd681bbbed.webp]]

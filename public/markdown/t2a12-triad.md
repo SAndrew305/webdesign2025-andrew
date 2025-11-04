@@ -1,0 +1,2 @@
+Three colors that are evenly spaced on the color wheel. This provides a high contrast color scheme, but less so than the complementary color combination — making it more versatile. This combination creates bold, vibrant color palettes.
+![[triadic-colors_w1356xh780_148a7a851f7093bd885a9aa386712174897737a83cb1afbb3181d8fe60ccbf2b.webp]]

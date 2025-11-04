@@ -1,0 +1,1 @@
+Two colors that are on opposite sides of the color wheel. This combination provides a high contrast and high impact color combination – together, these colors will appear brighter and more prominent.![[complementary-colors_w1356xh780_00ca2c674793e6cfe41a88b47330aa812de795ae749e1a67cf2e306bdd78e063.webp]]
