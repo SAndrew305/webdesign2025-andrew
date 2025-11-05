@@ -1,36 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>t2a12</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #ffffff;
-            text-shadow: 1px 1px 2px black; 
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>t2a12</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #f9fafb, #e5e7eb);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.6;
+      transition: background 1.5s ease-in-out, opacity 1s ease-in-out;
+    }
 
-            background-image: linear-gradient(to bottom right, #81A1B3, #A0CEE9);
-            background-size: cover;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            
-        }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
 
+    main {
+      width: 90%;
+      max-width: 1000px;
+      margin: 2rem auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
-    </style>
+    section {
+      background: white;
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, background 0.5s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h1, h2 {
+      margin-top: 0;
+      color: #222;
+    }
+
+    .wheel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 1.5rem;
+    }
+
+    canvas {
+      max-width: 100%;
+      border-radius: 50%;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+      cursor: crosshair;
+    }
+
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 12px;
+      margin-top: 1rem;
+    }
+
+    .color-swatch {
+      height: 100px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    .color-swatch.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .color-swatch:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .image-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .image-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 1.2rem;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-<h1 style="border-bottom: 2px solid #ffffff;padding-bottom: 10px;">Color Theory</h1>
+  <header>
+    <h1 style="color:white;">🎨 Color Theory Showcase</h1>
+  </header>
 
+  <main>
+    <section id="intro">
+      <h2>Introduction</h2>
+      <p>Explore the fundamentals of color theory—primary, secondary, complementary, and analogous color relationships. Click on any swatch to copy its color value to your clipboard!</p>
+    </section>
 
-Research and give examples of colour schemes for webpage tone<br>
-<br>
-Study:<br>
-- Color wheel<br>
-- Color theory<br>
+    <section id="wheel-section">
+      <h2>Interactive Color Wheel</h2>
+      <div class="wheel">
+        <canvas id="colorWheel" width="300" height="300"></canvas>
+      </div>
+      <div id="colorInfo">Click on the wheel to select a color.</div>
+      <div class="color-grid" id="colorGrid"></div>
+    </section>
+
+    <section id="visuals">
+      <h2>Visual Reference: Color Wheels & Concepts</h2>
+      <div class="image-grid">
+        <img src="https://media.defense.gov/2024/Oct/02/2003557678/1920/6000/0/241002-D-ZW071-0001.JPG" alt="Modern digital color wheel diagram" />
+        <img src="https://blog.hubspot.com/hs-fs/hubfs/123b.png?name=123b.png&width=292" alt="Basic color wheel chart" />
+        <img src="https://public-images.interaction-design.org/literature/articles/materials/2-ixdf-triadic-color-combinations.jpg" alt="Triadic color combinations wheel" />
+        <img src="https://www.greenleafblueberry.com/cdn/shop/articles/Color_Category_Diagram_2_copy_JPEG_2048x.jpg?v=1564333104" alt="Color category diagram" />
+        <img src="https://www.beachpainting.com/images/basic-wheel.jpg" alt="Classic artist color wheel" />
+        <img src="https://rmit.pressbooks.pub/app/uploads/sites/42/2022/10/additivesubtractivecolour-1024x524.png" alt="Additive and subtractive color models" />
+        <img src="https://i.sstatic.net/T8BiI.png" alt="Color mixing demonstration" />
+        <img src="https://blog.tubikstudio.com/wp-content/uploads/2017/10/color-wheel-for-designers-tubik-blog.png" alt="Designer’s color wheel guide" />
+      </div>
+    </section>
+
+    <section id="history">
+      <h2>Brief History of Color Theory</h2>
+      <p>The concept of color theory dates back to Isaac Newton’s color wheel in the 17th century, which demonstrated how colors relate through light and perception. Later, Johann Wolfgang von Goethe, Josef Albers, and Johannes Itten expanded on these ideas, connecting color harmony with emotion and art. Today, designers use color theory to create balance, contrast, and visual interest in digital and print media.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created as an interactive color theory visualization demo with visual references.</p>
+  </footer>
+
+  <script>
+    const canvas = document.getElementById('colorWheel');
+    const ctx = canvas.getContext('2d');
+    const radius = canvas.width / 2;
+    const colorGrid = document.getElementById('colorGrid');
+    const colorInfo = document.getElementById('colorInfo');
+
+    function drawWheel() {
+      for (let angle = 0; angle < 360; angle++) {
+        const startAngle = (angle * Math.PI) / 180;
+        const endAngle = ((angle + 1) * Math.PI) / 180;
+        ctx.beginPath();
+        ctx.moveTo(radius, radius);
+        ctx.arc(radius, radius, radius, startAngle, endAngle);
+        ctx.closePath();
+        ctx.fillStyle = `hsl(${angle}, 100%, 50%)`;
+        ctx.fill();
+      }
+    }
+
+    drawWheel();
+
+    function hslToRgb(h, s, l) {
+      s /= 100; l /= 100;
+      const k = n => (n + h / 30) % 12;
+      const a = s * Math.min(l, 1 - l);
+      const f = n => l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
+      return [255 * f(0), 255 * f(8), 255 * f(4)];
+    }
+
+    function rgbToString(rgb) {
+      return `rgb(${Math.round(rgb[0])}, ${Math.round(rgb[1])}, ${Math.round(rgb[2])})`;
+    }
+
+    canvas.addEventListener('click', (event) => {
+      const rect = canvas.getBoundingClientRect();
+      const x = event.clientX - rect.left - radius;
+      const y = event.clientY - rect.top - radius;
+      const angle = Math.atan2(y, x) * (180 / Math.PI);
+      const hue = (angle + 360) % 360;
+
+      const base = rgbToString(hslToRgb(hue, 100, 50));
+      colorInfo.textContent = `Selected Color: ${base}`;
+      colorInfo.style.color = base;
+
+      document.body.style.background = `linear-gradient(135deg, ${rgbToString(hslToRgb(hue, 70, 85))}, ${rgbToString(hslToRgb(hue, 80, 70))})`;
+
+      const palette = [
+        rgbToString(hslToRgb(hue, 100, 50)),
+        rgbToString(hslToRgb((hue + 30) % 360, 100, 50)),
+        rgbToString(hslToRgb((hue + 60) % 360, 100, 50)),
+        rgbToString(hslToRgb((hue + 180) % 360, 100, 50)),
+        rgbToString(hslToRgb((hue + 210) % 360, 100, 50))
+      ];
+
+      colorGrid.innerHTML = '';
+      palette.forEach((color, i) => {
+        const div = document.createElement('div');
+        div.className = 'color-swatch';
+        div.style.backgroundColor = color;
+        div.textContent = color;
+        div.addEventListener('click', () => navigator.clipboard.writeText(color));
+        colorGrid.appendChild(div);
+        setTimeout(() => div.classList.add('show'), i * 100);
+      });
+    });
+  </script>
 </body>
 </html>

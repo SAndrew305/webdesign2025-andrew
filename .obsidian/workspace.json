@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "public/markdown/t2a12-colors.md",
+                "file": "public/markdown/t2a12-monochromatic.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "t2a12-colors"
+              "title": "t2a12-monochromatic"
             }
           }
         ]
