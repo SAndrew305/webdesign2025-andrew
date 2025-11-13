@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman to Integer Converter</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background: #f7f7f7;
+    }
+    .container {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 0.5rem;
+      text-transform: uppercase;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    #result {
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Roman to Integer Converter</h2>
+    <input type="text" id="romanInput" placeholder="Enter Roman Numeral (e.g. MCMXCIV)">
+    <button onclick="convertRoman()">Convert</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function romanToInt(s) {
+      const map = {
+        I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000
+      };
+      let total = 0;
+      for (let i = 0; i < s.length; i++) {
+        const current = map[s[i]];
+        const next = map[s[i + 1]];
+        total += current < next ? -current : current;
+      }
+      return total;
+    }
+
+    function convertRoman() {
+      const input = document.getElementById('romanInput').value.trim().toUpperCase();
+      const resultDiv = document.getElementById('result');
+
+      if (!input) {
+        resultDiv.textContent = 'Please enter a Roman numeral.';
+        return;
+      }
+
+      const validRoman = /^[IVXLCDM]+$/;
+      if (!validRoman.test(input)) {
+        resultDiv.textContent = 'Invalid Roman numeral!';
+        return;
+      }
+
+      const number = romanToInt(input);
+      resultDiv.textContent = `Integer value: ${number}`;
+    }
+  </script>
+</body>
+</html>

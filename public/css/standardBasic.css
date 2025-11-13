@@ -57,6 +57,13 @@
             font-size: 0.9em;
             color: #93a1a1;
         }
+        pre {
+            color: #000;
+            line-height: normal;
+            background-color: #fff;
+            border-color: #000;
+            border-radius: 20px;
+        }
         .center {
             display: block;
             margin-left: auto;
@@ -90,4 +97,5 @@
         display: none;
         overflow: hidden;
         background-image: linear-gradient(to bottom right, #f0f4f8, #d9e2ec, #bcccdc);
-        } 
+        }
+        
