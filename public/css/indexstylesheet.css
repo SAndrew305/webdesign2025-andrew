@@ -2,13 +2,12 @@ body { /*Defines background and font properties*/
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #000;
 
-    background: linear-gradient(45deg, #18aaff, #00ff95, #8400ff, #ff61a2);
+    background: linear-gradient(45deg, #7D25DA, #D725DA, #2528DA);
             
-
     background-size: 300% 300%; 
 
     animation-name: background-pan;
-    animation-duration: 15s;
+    animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
