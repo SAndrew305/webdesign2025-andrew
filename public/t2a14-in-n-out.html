@@ -1,6 +1,6 @@
 <h2 align="center">t2a14 In Out </h2>
 
-<input id="textBox" type="text" value="..."><br>
+<input id="textBox" type="text" value=""><br>
 
 <span id="mySpan01" style="position:relative; left:0px; top:0px; width:50px;
 height:30px;">...</span><br>
@@ -8,15 +8,27 @@ height:30px;">...</span><br>
 <input type="button" value="Print Contents in textbox" onclick="{
     document.getElementById('mySpan01').innerHTML = document.getElementById('textBox').value
     }"><br>
+<br>
 
-<input type="button" value="Move Left" onclick="{
+<input type="button" value="↑" onclick="{
+    document.getElementById('mySpan01').style.top =
+    parseInt(document.getElementById('mySpan01').style.top) - 10 + 'px'
+}"><br>
+
+<input type="button" value="←" onclick="{
     document.getElementById('mySpan01').style.left =
     parseInt(document.getElementById('mySpan01').style.left) - 10 + 'px'
 }">
 
-<input type="button" value="Move Right" onclick="{
+<input type="button" value="↓" onclick="{
+    document.getElementById('mySpan01').style.top =
+    parseInt(document.getElementById('mySpan01').style.top) + 10 + 'px'
+}">
+
+<input type="button" value="→" onclick="{
     document.getElementById('mySpan01').style.left =
     parseInt(document.getElementById('mySpan01').style.left) + 10 + 'px'
 }"><br>
+
 
 Maybe get arrow keys and WASD working later? will look up next day.
