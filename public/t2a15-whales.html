@@ -7,7 +7,23 @@
     <link rel="stylesheet" href="css/standardBasic.css">
     <style>
         body {
+            transition: all 1s ease-in;
             background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fgiffiles.alphacoders.com%2F195%2F19520.gif&f=1&nofb=1&ipt=678a20f6026482c32c50b5c5f45e13e8255e73c9ce53ac8b8e7f8258b3c3224c');
+        }
+
+        @keyframes textAppear {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        
+        .container {
+            color: black;
+            animation-name: textAppear;
+            animation-duration: 1.375s;
+            animation-timing-function: ease-in-out;
+            padding: 25px 40px;
+            border-radius: 20px;
+
         }
         #banner {
             display: flex;
@@ -35,32 +51,109 @@
                 width: 120px;
             }
         }
+        .img-wrap {
+            position: relative;
+            display: inline-block;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
 
+        .img-wrap img {
+            width: 250px;   /* adjust size as needed */
+            height: auto;
+            display: block;
+            border-radius: 0px;
+            transition: all 0.4s ease;
+
+        }
+
+        .caption {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0,0,0,0.6);
+            color: white;
+            opacity: 0;
+            font-size: 20px;
+            padding: 10px;
+            transition: opacity 0.3s ease;
+        }
+
+        .img-wrap:hover .caption {
+            opacity: 1;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover { 
+            color: #4b4b4b;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
     </style>
 </head>
 <body>
 <div class="container" style="background-color: #ffffff86;">
-<div style="opacity: 1.0;">
-    <h1 align="center">t2a15-whales</h1>
+<h1 align="center"><b>t2a15-Whales</b></h1>
 
-    <p style="text-align:center;">Whales are marine mammals found in oceans around the world, known for their intelligence, massive size, and unique behaviors such as singing, deep diving, and long migrations.</p>
+<p style="text-align:center;">Whales are marine mammals found in oceans around the world, known for their intelligence, massive size, and unique behaviors such as singing, deep diving, and long migrations.</p>
 
+<!-- Image flex box -->
 <div id="banner" style="
     display: flex;
     flex-direction: row;
     flex-wrap: wrap-reverse;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
 ">
-    <img src ="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.DsDbmg1RkSvIXjp3gLnKeQHaE3%3Fpid%3DApi&f=1&ipt=7ea1eb03a1f62a4ab0de9aa5ef37e8f87337cbd7baf210dc25f0e78232be8261&ipo=images">
-    <img src ="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.NY_gJG13vFDnhWKDHDh_qQHaE8%3Fpid%3DApi&f=1&ipt=ec40717a2fe27cfc397394053372d9a126645e46969e89da92125cb37f8eb13d&ipo=images">
-    <img src ="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.7rRLKzWWGVEZ8wxbeAzMWgHaHa%3Fpid%3DApi&f=1&ipt=79851b3dc705cba56de7323ccebfb12319ac14c52b834d04dd2018201418ec62&ipo=images">
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.V1eKOHgCOnrfPIvr41GwYQHaF7%3Fpid%3DApi&f=1&ipt=0057f602d23d92635944e23ad03462e517ebd4f35d4f923e386a3d7871328859&ipo=images">
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.1C46J95RAN84DnWnXGYzegHaEg%3Fpid%3DApi&f=1&ipt=a7717441f72c9b295be8b46c81116b54e005c2c3f86cfc1e26415d9ef789b07a&ipo=images">
-    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.wC9JCGtaH5ZQ43uTanULmQHaE7%3Fpid%3DApi&f=1&ipt=9bd14b72e39c55442bec676705ba56ec0beb2d1a739f32a3ef8bc05736611583&ipo=images">
+
+    <div class="img-wrap">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.DsDbmg1RkSvIXjp3gLnKeQHaE3%3Fpid%3DApi&f=1&ipt=7ea1eb03a1f62a4ab0de9aa5ef37e8f87337cbd7baf210dc25f0e78232be8261&ipo=images">
+        <div class="caption">This is a killer whale, also known as an orca. This is closer to the dolphin family then it is to the whales.</div>
+    </div>
+
+    <div class="img-wrap">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.NY_gJG13vFDnhWKDHDh_qQHaE8%3Fpid%3DApi&f=1&ipt=ec40717a2fe27cfc397394053372d9a126645e46969e89da92125cb37f8eb13d&ipo=images">
+        <div class="caption">A whale breaching, launching a large part of its body out of the water and comes crashing down.</div>
+    </div>
+
+    <div class="img-wrap">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.7rRLKzWWGVEZ8wxbeAzMWgHaHa%3Fpid%3DApi&f=1&ipt=79851b3dc705cba56de7323ccebfb12319ac14c52b834d04dd2018201418ec62&ipo=images">
+        <div class="caption">Spy-hop; the whale is vertically oriented with its head above the surface of the water. Usually done to check surroundings.</div>
+    </div>
+
+    <div class="img-wrap">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.V1eKOHgCOnrfPIvr41GwYQHaF7%3Fpid%3DApi&f=1&ipt=0057f602d23d92635944e23ad03462e517ebd4f35d4f923e386a3d7871328859&ipo=images">
+        <div class="caption">Another whale breaches the surface.</div>
+    </div>
+
+    <div class="img-wrap">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.1C46J95RAN84DnWnXGYzegHaEg%3Fpid%3DApi&f=1&ipt=a7717441f72c9b295be8b46c81116b54e005c2c3f86cfc1e26415d9ef789b07a&ipo=images">
+        <div class="caption">This whale is resting quietly at the surface (also called logging).</div>
+    </div>
+
+    <div class="img-wrap">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%2Fid%2FOIP.wC9JCGtaH5ZQ43uTanULmQHaE7%3Fpid%3DApi&f=1&ipt=9bd14b72e39c55442bec676705ba56ec0beb2d1a739f32a3ef8bc05736611583&ipo=images">
+        <div class="caption">A whale showing its dorsal side (back) at the water’s surface, possibly as part of a low-fluking dive just before it submerges.</div>
+    </div>
+
 </div>
-</div>
-</div>
+
+<p style="text-align:center;">For more information, visit the links below;</p>
+<table border="0" style="text-align: center;">
+    <tr>
+        <td><a href="https://www.nationalgeographic.com/animals/mammals/facts/whale-facts">National Geographic</a></td>
+        <td><a href="https://www.britannica.com/animal/whale">Britannica</a></td>
+    </tr>
+</table>
+
+
+</div> <!-- Don't touch -->
 </body>
 </html>
