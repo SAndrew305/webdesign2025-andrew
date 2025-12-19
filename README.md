@@ -5,4 +5,6 @@
 [t2a12](public/markdown/t2a12-colors.md)
 [t2a14](public/markdown/t2a14-I/O.md)
 [t2a15](public/markdown/t2a15-whales)
+
+[Final](public/markdown/Final-project)
 If you're here wondering why there's links to other .md files, it's because starting on Oct. 20th, I started using Obsidian and it is USEFUL.

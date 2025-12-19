@@ -1,7 +1,7 @@
 {
   "theme": "obsidian",
   "accentColor": "#8a5cf5",
-  "cssTheme": "Minimal",
-  "interfaceFontFamily": "Tahoma",
-  "textFontFamily": "Tahoma"
+  "cssTheme": "",
+  "interfaceFontFamily": "Segoe UI",
+  "textFontFamily": ""
 }

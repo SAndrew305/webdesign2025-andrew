@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a68d716d472f770d",
+        "id": "62135a5df64a3118",
         "type": "tabs",
         "children": [
           {
-            "id": "808e68429a74017c",
+            "id": "d9bcab087c600eb3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "final-runlocal.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "final-runlocal"
             }
           }
         ]
@@ -169,16 +169,27 @@
       "bases:Create new base": false
     }
   },
-  "active": "808e68429a74017c",
+  "active": "d9bcab087c600eb3",
   "lastOpenFiles": [
+    "public/markdown/Final-project.md",
+    "final-considerations.md",
+    "final-LMM.md",
+    "final-localcloud.md",
+    "final-runlocal.md",
+    "final-history.md",
+    "Untitled.canvas",
+    "Untitled 2.base",
+    "Untitled 1.base",
+    "Untitled.base",
+    "public/markdown/t1a11-onClick.md",
+    "public/markdown/t2a15-whales.md",
+    "public/markdown/t2a14-I/O.md",
+    "README.md",
     "my-app/node_modules/axe-core/README.md",
     "my-app/node_modules/array.prototype.findlastindex/README.md",
     "my-app/node_modules/eslint-plugin-react/README.md",
     "public/markdown/t2a12-tetradic.md",
-    "public/markdown/t2a15-whales.md",
     "public/markdown/t2a12-colors.md",
-    "README.md",
-    "public/markdown/t2a14-I/O.md",
     "public/markdown/t2a14-I",
     "public/markdown/t2a12-monochromatic.md",
     "public/t2a14-in-n-out.html",
@@ -202,21 +213,10 @@
     "(public",
     "public/markdown/t1a11-JS2-onBlur.md",
     "public/t2a12-colour.html",
-    "public/markdown/t1a11-onClick.md",
     "public/markdown/t1a11-JS2-onSelect.md",
     "public/markdown/t1a11-JS2-onSubmit.md",
     "public/markdown/t1a11-JS2-onScroll.md",
     "public/markdown/t1a11-JS2-onLoad.md",
-    "public/markdown/t1a11-JS2-onKeyDown.md",
-    "public/markdown/t1a11-JS2-onMouseOut.md",
-    "public/markdown/t1a11-JS2-onChange.md",
-    "public/t1a11-JS2-andrew.html",
-    "t1a11-JS2-andrew.html",
-    "public/x11-JS-Events-hallucation.html",
-    "public/markdown/t1a11-JS2-onClick.md",
-    "public/markdown/t1a10-edgeimpulse.md",
-    "public/markdown/t1a11-JS2-onMouseOver.md",
-    "2025-10-21.md",
-    "Untitled.canvas"
+    "public/markdown/t1a11-JS2-onKeyDown.md"
   ]
 }
