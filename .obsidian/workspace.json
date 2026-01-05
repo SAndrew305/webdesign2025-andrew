@@ -6,9 +6,73 @@
       {
         "id": "62135a5df64a3118",
         "type": "tabs",
+        "dimension": 41.15138592750533,
         "children": [
           {
-            "id": "d9bcab087c600eb3",
+            "id": "56ad3595939a8697",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "public/markdown/Final-project.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Final-project"
+            }
+          }
+        ]
+      },
+      {
+        "id": "0518c5a0ecf0eca0",
+        "type": "tabs",
+        "dimension": 58.84861407249466,
+        "children": [
+          {
+            "id": "a78b1e25410b2e1a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "final-history.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "final-history"
+            }
+          },
+          {
+            "id": "e13f7f42560275ae",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "final-LMM.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "final-LMM"
+            }
+          },
+          {
+            "id": "608c3ac094c1db6a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "final-localcloud.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "final-localcloud"
+            }
+          },
+          {
+            "id": "fc69e5da7300f22d",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -20,8 +84,23 @@
               "icon": "lucide-file",
               "title": "final-runlocal"
             }
+          },
+          {
+            "id": "ef321e63469d7756",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "final-considerations.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "final-considerations"
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -169,14 +248,19 @@
       "bases:Create new base": false
     }
   },
-  "active": "d9bcab087c600eb3",
+  "active": "608c3ac094c1db6a",
   "lastOpenFiles": [
-    "public/markdown/Final-project.md",
-    "final-considerations.md",
-    "final-LMM.md",
-    "final-localcloud.md",
     "final-runlocal.md",
+    "final-considerations.md",
     "final-history.md",
+    "final-localcloud.md",
+    "final-LMM.md",
+    "public/markdown/Final-project.md",
+    "public/final-project/Recording 2026-01-05 092111.gif",
+    "public/final-project/20260105-1715-32.7796600.gif",
+    "20260105-1715-32.7796600.mp4",
+    "Pasted image 20260105090655.png",
+    "public/final-project/runlocal.html",
     "Untitled.canvas",
     "Untitled 2.base",
     "Untitled 1.base",
@@ -204,19 +288,13 @@
     "monochromatic-colors_w1356xh780_d67493d899ff06e8423933ed0b6d5f62835d5b0bbebad4c0085ef99b4f2423a3.webp",
     "tetradic-colors_w1356xh780_b4f150eaf1b5f705f63b62c121c6794ef60fe0baff6a1bcef2eadcbd681bbbed.webp",
     "public/markdown/t2a12-analogous.md",
-    "analogous-colors_w1356xh780_ea8941ea410626bbeef060ff0490558500ea2b59255941c1b447b8aa6f447553.webp",
-    "triadic-colors_w1356xh780_148a7a851f7093bd885a9aa386712174897737a83cb1afbb3181d8fe60ccbf2b.webp",
     "public/markdown/t2a12-complementary.md",
-    "complementary-colors_w1356xh780_00ca2c674793e6cfe41a88b47330aa812de795ae749e1a67cf2e306bdd78e063.webp",
     "(public/markdown/t2a12-colors.md",
     "(public/markdown",
-    "(public",
     "public/markdown/t1a11-JS2-onBlur.md",
-    "public/t2a12-colour.html",
     "public/markdown/t1a11-JS2-onSelect.md",
     "public/markdown/t1a11-JS2-onSubmit.md",
     "public/markdown/t1a11-JS2-onScroll.md",
-    "public/markdown/t1a11-JS2-onLoad.md",
-    "public/markdown/t1a11-JS2-onKeyDown.md"
+    "public/markdown/t1a11-JS2-onLoad.md"
   ]
 }
