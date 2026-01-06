@@ -11,6 +11,7 @@ The above isn't exactly a perfect guide, but it's a start. Usually there's a ton
 - Cost-effective.
 - Access to Pre-trained Proprietary Models
 - Easy to use..
+
 **Cons**
 - Over-usage can result in cost-effectiveness being lower.
 - Vendor Lock-In
@@ -19,13 +20,14 @@ The above isn't exactly a perfect guide, but it's a start. Usually there's a ton
 - Bad for the environment due to extremely high power consumption
 ## Local
 
-**Pros
+**Pros**
 - More control over models and hardware.
 - Can be less expensive than running in the cloud
 - Excellent Privacy
 - No internet? No issue
 - Less power consumption/Less environmental impact
-**Cons
+
+**Cons**
 - Setting up can be a pain in the ass
 - Upfront costs for beefy hardware usually very expensive
 - Limited Scalability
