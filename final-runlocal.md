@@ -1,4 +1,4 @@
-# Running Locally
+![[20260105-1715-32.7796600.gif]]# Running Locally
 
 Surprisingly, getting an LLM on your system is much easier than you'd think it would be. You don't need a $50k computer to just do this stuff, so I'm going to assume you're using a traditional computer or a Mac. Be aware that the things you'll be able to do depend on your hardware, so be mindful of anything you might be planning to do, like if you wanted to run something heavy like Text-to-video models, you'll need a specific type of GPU.
 
