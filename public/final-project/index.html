@@ -22,8 +22,8 @@
             max-width: auto;
             margin: 0 auto;
             background-color: #4e4e4e8e;
-            padding: 25px 40px;
-            border-radius: 12px;
+            padding: 1px 1px;
+            border-radius: 5px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
                 transition: transform 0.5s ease;
         }
@@ -40,6 +40,8 @@
             padding-bottom: 10px;
             text-shadow:rgb(from color 255 0 0);
         }
+
+
         img {
             max-width: 100%;
             height: auto;
@@ -80,11 +82,58 @@
             border-radius: 20px;
             white-space: pre-wrap;
         }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        ul li a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            background-color: #111111;
+            border-radius:5px;
+        }
+
+        @keyframes voila {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .voila {
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
+            animation-name: voila;
+            animation-duration: 1.5s;
+            animation-delay: 1s;
+            opacity: 0;
+        }
+
         </style>
 </head>
 <body>
-<h1 align="center">Machine Learning</h1>
-<div>
+<div class="voila">
+    <h1 align="center" class="voila">Locally Machine Learning</h1>
+    <div class="container">
+        <ul>
+            <li><a href="#home">Brief History</a></li>
+            <li><a href="#news">Diffrences and Comparisons</a></li>
+            <li><a href="#contact">Cloud V. Local</a></li>
+            <li><a href="#about">Run Locally</a></li>
+            <li><a href="#about">Ethics and Morals</a></li>
+        </ul>
+    </div>
+    <p align="center"></p>
+
+</div>
+<!--<div>
 <i><b>Topic:</b> Running Large Language Models, Large Multimodal Models, Generative Pre-Trained Transformers, and Diffusion-based Generative Models locally on client system (LLMs, LMMs, GPTs, and DGM).
 <br><br>
 
@@ -108,7 +157,7 @@ With these things considered, I am ready to begin working on my project.
 <br>* Running AI locally vs In the cloud,
 <br>* How to run these models on your system, and
 <br>* Things to consider (ethics and morals).</i>
-</div>
+</div>-->
 
 
 </body>

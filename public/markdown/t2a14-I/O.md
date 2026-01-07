@@ -33,3 +33,5 @@ Front-end;
 `<input type="button" value="Calculate Answer">`
 // `onClick` event for the button returns answer
 // return `invalid` if input is `x / 0` or `0 / 0`.
+
+O needs to be a dynamic variable

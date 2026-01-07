@@ -1,31 +1,96 @@
-Locally vs. in the cloud - Whats the difference
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Locally vs. in the cloud - What's the difference</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    h2 {
+      color: #555;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    ul, ol {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
 
-Basically summed down to this:
+<h1>Locally vs. in the cloud - What's the difference</h1>
 
-Cloud
-    Pros
-    - Fast
-    - Scalable
-    - Cost-effective if you don't have high-end hardware.
-    - Access to new, pre-trained models
-    - Ease of Use
-    Cons
-    - Can get expensive
-    - Closed source and proprietary
-    - Vendor Lock-In
-    - Model Providers can use your chats to train their models
-    - Requires Wi-Fi 
-    - Bad for the enviroment
+<p>Just use ChatGPT for daily tasks? It makes sense to just use OpenAI's systems in the cloud for processing. Working with large scale models that require millions of dollars worth of compute to even produce a response? Cloud. Toying with LLMs for the first time and want extensive control, privacy, and the ability to run models offline, away from prying eyes? It would make sense to run models locally.</p>
 
-Local
-    Pros
-    - More control
-    - Low costs
-    - Excellent Privacy
-    - Can be run offline
-    - Less enviromental impact
-    Cons
-    - High costs upfront
-    - Can be difficult to set up.
-    - Limited Scalability
-    - Can't access pre-trained models like (GPT-5)
+<p>The above isn't exactly a perfect guide, but it's a start. Usually there's a ton of things to consider, like what resources you have immediately available, what sort of control you want over your models, and what your overall budget is for working on AI. We can sum it down thankfully, to just Pros and Cons of each;</p>
+
+<h2>Cloud</h2>
+
+<ul>
+  <li><strong>Pros</strong></li>
+  <ul>
+    <li>Fast and Reliable (generally)</li>
+    <li>Scalable.</li>
+    <li>Cost-effective.</li>
+    <li>Access to Pre-trained Proprietary Models</li>
+    <li>Easy to use..</li>
+  </ul>
+  <li><strong>Cons</strong></li>
+  <ul>
+    <li>Over-usage can result in cost-effectiveness being lower.</li>
+    <li>Vendor Lock-In</li>
+    <li>Lack of privacy.</li>
+    <li>Requires Wi-Fi, making it impossible to run offline.</li>
+    <li>Bad for the environment due to extremely high power consumption</li>
+  </ul>
+</ul>
+
+<h2>Local</h2>
+
+<ul>
+  <li><strong>Pros</strong></li>
+  <ul>
+    <li>More control over models and hardware.</li>
+    <li>Can be less expensive than running in the cloud</li>
+    <li>Excellent Privacy</li>
+    <li>No internet? No issue</li>
+    <li>Less power consumption/Less environmental impact</li>
+  </ul>
+  <li><strong>Cons</strong></li>
+  <ul>
+    <li>Setting up can be a pain in the ass</li>
+    <li>Upfront costs for beefy hardware usually very expensive</li>
+    <li>Limited Scalability</li>
+    <li>Can't access pre-trained proprietary models like (GPT-5)</li>
+    <li>Speed is heavily dependent on rig specs</li>
+  </ul>
+</ul>
+
+<p>TL;DR: Running Models in the Cloud makes sense for rapid model development and dynamic scaling, but can quickly get expensive from over usage. If privacy, control, and cost over time are your main concerns, or if you just love working with your own hardware, then running locally is the best way to go.</p>
+
+</body>
+</html>

@@ -4,66 +4,38 @@
     "type": "split",
     "children": [
       {
-        "id": "5e1887f5be30da9c",
-        "type": "split",
+        "id": "ab2387c68a2dda2a",
+        "type": "tabs",
         "children": [
           {
-            "id": "ab2387c68a2dda2a",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "d65b848e80c80aa9",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "final-LMM.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "final-LMM"
-                }
+            "id": "d65b848e80c80aa9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "final-LMM.md",
+                "mode": "source",
+                "source": false
               },
-              {
-                "id": "0313f6d405b5dd22",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "final-runlocal.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "final-runlocal"
-                }
-              }
-            ],
-            "currentTab": 1
+              "icon": "lucide-file",
+              "title": "final-LMM"
+            }
           },
           {
-            "id": "3084bb0f7c835eff",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "56ad3595939a8697",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "public/markdown/Final-project.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "Final-project"
-                }
-              }
-            ]
+            "id": "0313f6d405b5dd22",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "final-runlocal.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "final-runlocal"
+            }
           }
-        ],
-        "direction": "horizontal"
+        ]
       }
     ],
     "direction": "vertical"
@@ -211,14 +183,14 @@
       "bases:Create new base": false
     }
   },
-  "active": "0313f6d405b5dd22",
+  "active": "d65b848e80c80aa9",
   "lastOpenFiles": [
-    "public/markdown/Final-project.md",
-    "final-LMM.md",
-    "final-history.md",
-    "final-considerations.md",
     "final-runlocal.md",
     "final-localcloud.md",
+    "final-LMM.md",
+    "public/markdown/Final-project.md",
+    "final-history.md",
+    "final-considerations.md",
     "20260105-1715-32.7796600.gif",
     "public/final-project/Recording 2026-01-05 092111.gif",
     "public/final-project/20260105-1715-32.7796600.gif",
