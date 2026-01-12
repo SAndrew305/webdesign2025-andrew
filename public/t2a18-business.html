@@ -1,18 +1,421 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>t2a18</title>
-    <link rel="stylesheet" href="css/standardBasic.css">
+    <title>CORE & CANVAS | Custom PC Components</title>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary: #0f172a;
+            --accent: #3b82f6;
+            --bg-light: #f8fafc;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --white: #ffffff;
+            --radius: 12px;
+            --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* --- NAVIGATION --- */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 5%;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .cart-trigger {
+            background: var(--primary);
+            color: white;
+            padding: 0.7rem 1.4rem;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .cart-trigger:hover {
+            background: #1e293b;
+            transform: scale(1.02);
+        }
+
+        /* --- HERO --- */
+        .hero {
+            padding: 80px 5%;
+            background: radial-gradient(circle at top right, #f1f5f9, #ffffff);
+            text-align: center;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.2rem, 6vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        /* --- PRODUCT GRID --- */
+        .shop-container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 5%;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            border-color: var(--accent);
+        }
+
+        .card-img {
+            height: 240px;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        .card-price {
+            font-weight: 800;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .add-btn {
+            width: 100%;
+            padding: 0.9rem;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: auto;
+        }
+
+        .add-btn:hover {
+            background: var(--accent);
+        }
+
+        /* --- CART OVERLAY --- */
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            right: -450px;
+            width: 450px;
+            height: 100vh;
+            background: var(--white);
+            box-shadow: -15px 0 50px rgba(0,0,0,0.1);
+            z-index: 2000;
+            transition: right 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            flex-direction: column;
+            padding: 2.5rem;
+        }
+
+        .cart-overlay.active {
+            right: 0;
+        }
+
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .close-cart {
+            font-size: 2rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+        }
+
+        .cart-items {
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .cart-footer {
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .total-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 1.2rem;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 800;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .overlay-bg {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.6);
+            display: none;
+            z-index: 1500;
+            backdrop-filter: blur(4px);
+        }
+
+        .overlay-bg.active {
+            display: block;
+        }
+
+        @media (max-width: 500px) {
+            .cart-overlay { width: 100%; right: -100%; }
+        }
+    </style>
 </head>
 <body>
-<h1>t2a18-business</h1>
 
-Make a webpage about an acceptable business of your choice that needs a wbepage for customers to see the products and give feedback either to order items, or to book an appointment, etc,.<br>
-Use what you have learned to make it look nice with images, tables, lists, and forms with CSS.
-<br><br>
-Update your index so it is ready to be marked. Each person should try and pick a different business.
-<!-- Chosen Business: Computer repairs and sales -->
+    <nav class="navbar">
+        <div class="logo">Core & Canvas</div>
+        <ul class="nav-links">
+            <li><a href="#">Processors</a></li>
+            <li><a href="#">Graphics</a></li>
+            <li><a href="#">Storage</a></li>
+        </ul>
+        <div class="cart-trigger" onclick="toggleCart(true)">
+            Cart [<span id="cart-count">0</span>]
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Next-Gen PC Hardware</h1>
+        <p>Build your dream workstation with components designed for speed, stability, and unparalleled performance. <i>Note: Global RAM shortages currently in effect.</i></p>
+    </header>
+
+    <main class="shop-container">
+        <div class="grid" id="product-grid">
+            <!-- Products injected by JS -->
+        </div>
+    </main>
+
+    <!-- Cart UI -->
+    <div class="overlay-bg" id="bg" onclick="toggleCart(false)"></div>
+    <div class="cart-overlay" id="cart">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" onclick="toggleCart(false)">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-list">
+            <!-- Cart items injected by JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="total-row">
+                <span>Total</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="confirmPurchase()">Confirm Order</button>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            { id: 1, category: "Memory", name: "32GB DDR5 RGB RAM (2x16GB)", price: 18500, icon: "💾" },
+            { id: 2, category: "Graphics", name: "RTX PRO 6000", price: 19999, icon: "🎮" },
+            { id: 3, category: "Processor", name: "Intel Core 9 Ultra 285K", price: 749, icon: "🔲" },
+            { id: 4, category: "Memory", name: "4GB DDR3-1333", price: 9500, icon: "📼" },
+            { id: 5, category: "Storage", name: "20TB NVMe Gen 5 SSD", price: 4200, icon: "⚡" },
+            { id: 6, category: "Memory", name: "128GB Workstation RAM Kit", price: 42000, icon: "🏗️" }
+        ];
+
+        let cart = [];
+
+        function initStore() {
+            const grid = document.getElementById('product-grid');
+            grid.innerHTML = products.map(p => `
+                <div class="card">
+                    <div class="card-img">${p.icon}</div>
+                    <div class="card-body">
+                        <span class="card-tag">${p.category}</span>
+                        <h3 class="card-title">${p.name}</h3>
+                        <p class="card-price">$${p.price.toLocaleString()}</p>
+                        <button class="add-btn" onclick="addToCart(${p.id})">Add to Build</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function addToCart(id) {
+            const product = products.find(p => p.id === id);
+            cart.push(product);
+            updateCartUI();
+            
+            const btn = event.target;
+            const originalText = btn.innerText;
+            btn.innerText = "Reserved";
+            btn.style.background = "#3b82f6";
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.style.background = "";
+            }, 800);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = cart.length;
+
+            const list = document.getElementById('cart-list');
+            if (cart.length === 0) {
+                list.innerHTML = `<p style="color: #94a3b8; margin-top: 3rem; text-align: center; font-weight: 500;">No components added yet.</p>`;
+            } else {
+                list.innerHTML = cart.map((item, index) => `
+                    <div class="cart-item">
+                        <div>
+                            <div style="font-weight: 700; color: var(--primary);">${item.name}</div>
+                            <div style="color: var(--accent); font-size: 0.9rem; font-weight: 600;">$${item.price.toLocaleString()}</div>
+                        </div>
+                        <button onclick="removeFromCart(${index})" style="background: #fee2e2; border: none; color: #ef4444; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-weight: 700;">Remove</button>
+                    </div>
+                `).join('');
+            }
+
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            document.getElementById('cart-total').innerText = `$${total.toLocaleString()}`;
+        }
+
+        function toggleCart(isOpen) {
+            document.getElementById('cart').classList.toggle('active', isOpen);
+            document.getElementById('bg').classList.toggle('active', isOpen);
+        }
+
+        function confirmPurchase() {
+            if (cart.length === 0) {
+                alert("Your cart is empty!");
+                return;
+            }
+            alert("Order placed successfully! Please check your email for tracking details.");
+            cart = [];
+            updateCartUI();
+            toggleCart(false);
+        }
+
+        window.onload = initStore;
+    </script>
 </body>
 </html>
